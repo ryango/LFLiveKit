@@ -109,9 +109,9 @@
     self.socket = nil;
 }
 
-- (void)pushVideo:(nullable CVPixelBufferRef)pixelBuffer{
+- (void)pushVideo:(nullable CVPixelBufferRef)pixelBuffer timeStamp:(uint64_t)timeStamp {
     if(self.captureType & LFLiveInputMaskVideo){
-        if (self.uploading) [self.videoEncoder encodeVideoData:pixelBuffer timeStamp:NOW];
+        if (self.uploading) [self.videoEncoder encodeVideoData:pixelBuffer timeStamp:timeStamp];
     }
 }
 

@@ -153,7 +153,7 @@ typedef NS_ENUM(NSInteger,LFLiveCaptureTypeMask) {
 - (void)stopLive;
 
 /** support outer input yuv or rgb video(set LFLiveCaptureTypeMask) .*/
-- (void)pushVideo:(nullable CVPixelBufferRef)pixelBuffer;
+- (void)pushVideo:(nullable CVPixelBufferRef)pixelBuffer timeStamp:(uint64_t)timeStamp;
 
 /** support outer input pcm audio(set LFLiveCaptureTypeMask) .*/
 - (void)pushAudio:(nullable NSData*)audioData timeStamp:(uint64_t)timeStamp;
